@@ -3,13 +3,13 @@
 To compile and use a project, change directory into it ("cd" command), make a Build dir and change directory into it, generate build files and then make using makefiles.
 
 For example, to test the "SimpleGPIO" example do the following from the root folder:
-'''
+```
 > cd SimpleGPIO
 > mkdir Build && cd Build
 > cmake ..
 > make
 > ./MyEXE
-'''
+```
 
 The final command "./MyEXE" will run the program.
 
