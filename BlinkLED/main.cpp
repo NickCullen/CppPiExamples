@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <wiringPi.h>
 
+#include <unistd.h> // Required for Sleep();
+
 int main(int argc, char** argv)
 {
     // Intialize the wiringPi Library
@@ -20,7 +22,13 @@ int main(int argc, char** argv)
 
         // Toggle to HIGH/LOW output
         state = (state == HIGH) ? LOW : HIGH;
+
+        // Wait 1 second
+        sleep(1);
     }
+
+    // Ensure we turn LED off
+    digitalWrite(3, LOW);
     
     // Exit program
     return 0;
